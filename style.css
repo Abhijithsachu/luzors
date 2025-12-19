@@ -1,0 +1,100 @@
+/* 1. Basic Setup & Smooth Scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #001011 !important; /* നിങ്ങൾ ആവശ്യപ്പെട്ട Deep Dark Teal */
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    color: white;
+    overflow-x: hidden;
+}
+
+/* 2. Header & Premium Navbar */
+header {
+    background-color: rgba(0, 16, 17, 0.9) !important;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(108, 207, 246, 0.2) !important;
+}
+
+.nav-link {
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    position: relative;
+    padding: 10px 15px !important;
+}
+
+.nav-link:hover {
+    color: #6ccff6 !important; /* Sky Blue highlight */
+}
+
+/* Navbar Underline Animation */
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 5px;
+    left: 15px;
+    background-color: #6ccff6;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: calc(100% - 30px);
+}
+
+/* 3. Sections */
+section {
+    scroll-margin-top: 90px;
+    border-bottom: 1px solid rgba(108, 207, 246, 0.05);
+}
+
+/* 4. Buttons (Custom Color: #6ccff6) */
+.btn-info {
+    background-color: #6ccff6 !important;
+    border: none !important;
+    color: #001011 !important;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border-radius: 50px;
+}
+
+.btn-info:hover {
+    background-color: #ffffff !important;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(108, 207, 246, 0.4) !important;
+}
+
+/* 5. Card Hover Effects (Lift & Zoom) */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: rgba(255, 255, 255, 0.05) !important;
+    backdrop-filter: blur(10px);
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-10px); /* കാർഡ് അല്പം മുകളിലേക്ക് ഉയരും */
+    box-shadow: 0 10px 20px rgba(108, 207, 246, 0.3) !important; /* Blue glow shadow */
+}
+
+.card-img-top {
+    transition: transform 0.5s ease;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card:hover .card-img-top {
+    transform: scale(1.05); /* ഇമേജ് ചെറുതായി സൂം ആകും */
+}
+
+/* Footer Link Hover */
+.hover-link:hover {
+    color: #6ccff6 !important;
+    padding-left: 5px;
+    transition: 0.3s;
+}
